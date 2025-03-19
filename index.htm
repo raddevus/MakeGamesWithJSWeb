@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Make Games With JS</title>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="article" onclick="loadArticle('./intro.htm')">Chapter 001 - intro</div>
+	<div class="article" onclick="loadArticle('./chpt001/fish.htm')">
+	Intro Part 2: Fishing Leads To Game Dev</div>        
+	<div class="article" onclick="loadArticle('./code.htm')">All Code Samples</div>
+	<div class="article" onclick="loadArticle('./chpt001/learn.htm')">Ideas On Learning</div>
+        <!-- Add more articles here -->
+    </div>
+    <div class="content" id="mainContent">
+	<h1>2025-02-24</h1>
+	<p> There's a great new example which includes scoring, high scores & sounds.</p>
+	<p> Check out chapter 008 - 001 example</p>
+	<p> It's like a bad version of Flappy Bird & uses Flappy Bird score board.  Check it out!</p>
+        <h1>2025-02-23</h1>
+	<p> There's a new code sample to try out.<br>
+	And it almost feels like a game.  <br>
+	Although it is the most difficult game you'll probably ever play.<br>
+	Try out the sample from Chapter 007 - 003 to see what I mean.<br>
+	You have to move the character's head right over the circle but when you do
+        the circle will disappear & you will get 10 points.  There are 100 circles
+        so see if you can get the max of 1,000 points to win.  It's terrible & difficult.  :)
+        <h3>video of game play</h3>
+	<video controls>
+	   <source src="./code/videos/MakeGamesWithJS-dottyCat.mp4" type=video/mp4">
+	</video>
+	<h1>2025-02-22</h1>
+        <p>
+	Get all the source at <a href="https://github.com/raddevus/makegameswithjs" target="_blank">my github repo.</a></p>
+	<p>Book is coming soon</p>
+	<p>The book (Make Games With JS) will show you how to make games that you can share with your friends by simply sending them a link they can visit in their browsers.</p>
+	<p>The latest example is playable in your mobile browser.  Try it out now by visiting the new chapter sample in Chapter 7 (files listed at link below).</p>
+	<h1>2025-02-20</h1>
+	<h2>Try The Samples</h1>
+	<p>I've got the samples up through chapter six. Try them out.</p>
+	<p>See <a href="code.htm">list of all examples</a>.
+	<h1>2025-02-19</h1>
+	<h2>Coming soon...</h2>
+	<h2>Make Games With JavaScript - The Book</h2>
+    </div>
+
+    <script>
+        async function loadArticle(url) {
+            try {
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const content = await response.text();
+                document.querySelector('#mainContent').innerHTML = content;
+            } catch (error) {
+                document.querySelector('#mainContent').innerHTML = `<p>Error loading article: ${error.message}</p>`;
+            }
+          }
+    </script>
+</body>
+</html>
