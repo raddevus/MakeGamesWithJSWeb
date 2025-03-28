@@ -30,6 +30,16 @@ body {
    background-color: #f0f0f0;
 }
 
+.blockquote {
+  font-size: 1.5em; /* Adjust font size as needed */
+  text-align: justify;
+  font-style: italic;
+  margin: 20px; /* Add some spacing around the blockquote */
+  padding: 10px; /* Add inner padding */
+  border-left: 5px solid #ccc; /* Add a subtle vertical line on the left */
+  background-color: #f9f9f9; /* Light background to make it stand out */
+}
+
 .pulse {
   background: rgb(var(--pulse-color));
   
