@@ -9,22 +9,9 @@ const permalink = `${Astro.site.href}samples`;
 
 <BaseLayout title={title} description={description} permalink={permalink} current="samples">
   <div class="container">
-    <h1>Downloads</h1>
-    <h2>Cross-Platform - C# .Net Core 9.x</h2>
-    <p>
-    
-    <ul>
-       {downloads.map(d => (
-        <li>
-          <strong>{d.name}</strong> ({d.version}) — {d.size}
-          <br />
-          <a href={d.file} download>Download</a><br>
-          For more info see: <a href={d.info}>Installation notes and screen shots</a>
-        </li>
-      ))}
+     <h2>Runnable Examples via Sample Code</h2>
 
-    </ul>
-    </p>
+  </div>
 </BaseLayout>
 
 <style>
