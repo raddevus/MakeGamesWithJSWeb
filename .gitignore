@@ -2,7 +2,8 @@
 dist/
 # generated types
 .astro/
-
+# code directory - from main git repo makegameswithjs
+code/
 # dependencies
 node_modules/
 
